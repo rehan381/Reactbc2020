@@ -25,11 +25,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install NodeJS
-        uses: action/setup-node@v2-beta 
+        uses: actions/setup-node@v2-beta 
         with: 
               node-version: 12
       - name: Instal Surge
         run:  npm install -g surge
       - name: Run surge
-        run:  surge ./ reactapp.surge.sh  --token$({secret.SURGE_TOKEN})
+        run:  surge ./ reactapp.surge.sh  --token$({secrets.SURGE_TOKEN})
         
